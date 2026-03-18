@@ -1,0 +1,14 @@
+service: serverless-vercel-cron
+
+provider:
+  name: vercel
+  # Note: The Serverless Framework Vercel provider typically uses vercel.json for configuration.
+  # This file is provided as requested by the user.
+
+functions:
+  cron:
+    handler: api/cron.handler
+    events:
+      - schedule:
+          rate: cron(*/5 * * * *)
+          enabled: true
