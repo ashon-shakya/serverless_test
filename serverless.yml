@@ -10,5 +10,5 @@ functions:
     handler: api/cron.handler
     events:
       - schedule:
-          rate: cron(*/5 * * * *)
+          rate: cron(0 10 * * *)
           enabled: true
